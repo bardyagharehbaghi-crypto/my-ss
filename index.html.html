@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سنگین‌راید | همه موتورها یک‌جا</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Tahoma,sans-serif}
+body{background:#0f1115;color:#f2f2f2;line-height:1.8}
+.top{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:#15181df2;border-bottom:1px solid #2a2e37}
+.logo{font-weight:900;font-size:19px}.logo span{color:#ff6a00;font-size:12px;font-weight:400;margin-right:8px}
+.hero{text-align:center;padding:32px 18px;background:radial-gradient(800px 280px at 50% 0%,#ff6a0026,transparent),linear-gradient(#171a21,#0f1115)}
+.hero h1{font-size:26px;margin-bottom:8px}.hero p{color:#bbb;margin-bottom:14px;font-size:14px}
+.controls{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
+.controls input,.controls select{padding:11px 14px;border-radius:12px;border:1px solid #333;background:#1c1f27;color:#fff;min-width:240px;outline:none}
+.filters{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.filters button{padding:7px 16px;border-radius:20px;border:1px solid #333;background:#1c1f27;color:#ddd;cursor:pointer}
+.filters button.active,.filters button:hover{background:#ff6a00;border-color:#ff6a00;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px;padding:20px;max-width:1150px;margin:auto}
+.card{background:#181b22;border:1px solid #262b36;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.img{height:200px;overflow:hidden;position:relative;background:#222}
+.img img{width:100%;height:100%;object-fit:cover;display:block}
+.img.ph{display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#232733,#3a4155);color:#d6dcea;font-size:15px;padding:16px}
+.img.ph.bmw{background:linear-gradient(135deg,#0a2540,#2563eb)}
+.badge{position:absolute;top:10px;right:10px;background:#ff6a00;color:#fff;font-size:11px;padding:3px 11px;border-radius:20px}
+.info{padding:14px;display:flex;flex-direction:column;gap:9px;flex:1}
+.info h2{font-size:17px}.sub{font-size:12px;color:#999}
+.specs{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;background:#11141a;border-radius:10px;padding:9px;text-align:center}
+.specs b{display:block;font-size:10px;color:#888;font-weight:400}.specs span{font-size:12px;font-weight:700}
+.price{background:#0f2a1a;border:1px dashed #22c55e;color:#4ade80;border-radius:10px;padding:9px;font-weight:800;text-align:center;font-size:14px}
+.price small{display:block;color:#9ca3af;font-weight:400;font-size:11px}
+@media(max-width:600px){.hero h1{font-size:21px}.specs{grid-template-columns:1fr 1fr}}
+.box{max-width:1050px;margin:14px auto;padding:18px;background:#15181e;border-radius:16px;border:1px solid #262b36}
+.box h2{margin-bottom:10px;color:#ff6a00;font-size:18px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:9px;border-bottom:1px solid #262b36;text-align:center}th{color:#888;font-weight:400}
+footer{text-align:center;padding:20px;color:#777;font-size:12px}
+</style>
+</head>
+<body>
+<div class="top"><div class="logo">🏍️ سنگین‌راید <span>همه در یک صفحه • بدون صفحه ۲</span></div></div>
+<div class="hero">
+<h1>همه موتورسنگین‌ها از یاماها تا بی‌ام‌و</h1>
+<p>۱۲ مدل کامل • عکس + مشخصات + قیمت • همه پشت سر هم</p>
+<div class="controls">
+<input id="search" type="text" placeholder="جست‌وجو... R1 ، Z1000 ، هایابوسا">
+<select id="sort"><option value="default">پیش‌فرض</option><option value="cheap">ارزان‌ترین اول</option><option value="exp">گران‌ترین اول</option><option value="power">قوی‌ترین اول</option></select>
+</div>
+<div class="filters">
+<button class="active" data-f="all">همه</button><button data-f="yamaha">یاماها</button><button data-f="honda">هوندا</button><button data-f="kawasaki">کاوازاکی</button><button data-f="suzuki">سوزوکی</button><button data-f="bmw">بی‌ام‌و</button>
+</div>
+</div>
+<main class="grid" id="grid">
+<article class="card" data-brand="yamaha" data-price="6500000000" data-power="200" data-name="yamaha r1"><div class="img"><img loading="lazy" src="https://sanginmotor.com/wp-content/uploads/2026/01/IC5YUWU7NFH5ZGZY7X2YTLN2WA.jpg" alt="R1"><span class="badge">ریس</span></div><div class="info"><h2>Yamaha YZF-R1</h2><div class="sub">۹۹۸ سی‌سی • ۴ سیلندر کراس‌پلین • ۲۰۰ اسب</div><div class="specs"><div><b>حجم</b><span>998cc</span></div><div><b>قدرت</b><span>200</span></div><div><b>وزن</b><span>201kg</span></div><div><b>سرعت</b><span>299</span></div></div><div class="price">۶/۵ میلیارد تومان<small>صفر • دست‌دوم ۱/۳ تا ۳/۱ میلیارد</small></div></div></article>
+<article class="card" data-brand="yamaha" data-price="1300000000" data-power="119" data-name="yamaha mt-09"><div class="img"><img loading="lazy" src="https://sanginmotor.com/wp-content/uploads/2026/01/%D8%AE%D8%B1%DB%8C%D8%AF-%D9%85%D9%88%D8%AA%D9%88%D8%B1-%D8%B3%D9%86%DA%AF%DB%8C%D9%86-%DB%8C%D8%A7%D9%85%D8%A7%D9%87%D8%A7-MT-09-%D9%87%DB%8C%D8%AC%D8%A7%D9%86%D8%8C-%DA%86%D8%A7%D8%A8%DA%A9%DB%8C-%D9%88-%D8%AA%DA%A9%D9%86%D9%88%D9%84%D9%88%DA%98%DB%8C-%D9%BE%DB%8C%D8%B4%D8%B1%D9%81%D8%AA%D9%87-1024x683.png" alt="MT-09"></div><div class="info"><h2>Yamaha MT-09</h2><div class="sub">۸۹۰ سی‌سی • ۳ سیلندر • نیکد چابک</div><div class="specs"><div><b>حجم</b><span>890cc</span></div><div><b>قدرت</b><span>119</span></div><div><b>وزن</b><span>193kg</span></div><div><b>کاربرد</b><span>شهر</span></div></div><div class="price">۱/۳ میلیارد تومان<small>صفر فروشگاهی</small></div></div></article>
+<article class="card" data-brand="yamaha" data-price="2000000000" data-power="118" data-name="yamaha r6"><div class="img ph">🏍️ Yamaha R6<br>۵۹۹ سی‌سی پیستی</div><div class="info"><h2>Yamaha R6</h2><div class="sub">۵۹۹ سی‌سی • ۱۱۸ اسب • تیز و پیستی</div><div class="specs"><div><b>حجم</b><span>599cc</span></div><div><b>قدرت</b><span>118</span></div><div><b>وزن</b><span>190kg</span></div><div><b>سرعت</b><span>260</span></div></div><div class="price">۱/۵ تا ۲/۲ میلیارد<small>دست‌دوم</small></div></div></article>
+<article class="card" data-brand="honda" data-price="1600000000" data-power="114" data-name="honda cb1300"><div class="img"><img loading="lazy" src="https://sanginmotor.com/wp-content/uploads/2026/01/%D8%AA%D8%B5%D9%88%DB%8C%D8%B1-%D9%87%D9%88%D9%86%D8%AF%D8%A7-CB1300-%D9%82%D8%B1%D9%85%D8%B2-1024x683.png" alt="CB1300"></div><div class="info"><h2>Honda CB1300</h2><div class="sub">۱۲۸۴ سی‌سی • کلاسیک قدرتمند • ۲۱ لیتر باک</div><div class="specs"><div><b>حجم</b><span>1284cc</span></div><div><b>قدرت</b><span>114</span></div><div><b>وزن</b><span>243kg</span></div><div><b>سرعت</b><span>230</span></div></div><div class="price">۱/۶ میلیارد تومان<small>تمیزها تا ۴/۵ میلیارد</small></div></div></article>
+<article class="card" data-brand="honda" data-price="1880000000" data-power="215" data-name="honda cbr1000 repsol"><div class="img"><img loading="lazy" src="https://sanginmotor.com/wp-content/uploads/2026/01/1.jpg" alt="CBR"><span class="badge">Repsol</span></div><div class="info"><h2>Honda CBR1000RR Fireblade</h2><div class="sub">۱۰۰۰ سی‌سی • ۲۱۵ اسب • ریس</div><div class="specs"><div><b>حجم</b><span>1000cc</span></div><div><b>قدرت</b><span>215</span></div><div><b>وزن</b><span>201kg</span></div><div><b>سرعت</b><span>299</span></div></div><div class="price">۳۸۵ میلیون تا ۱/۸۸ میلیارد<small>بسته به مدل و سند</small></div></div></article>
+<article class="card" data-brand="kawasaki" data-price="1720000000" data-power="142" data-name="kawasaki z1000"><div class="img"><img loading="lazy" src="https://sanginmotor.com/wp-content/uploads/2026/01/%D9%86%D9%85%D8%A7%DB%8C-%D8%AC%D9%84%D9%88-Z1000-1024x683.png" alt="Z1000"></div><div class="info"><h2>Kawasaki Z1000</h2><div class="sub">۱۰۴۳ سی‌سی • نیکد تهاجمی • ۱۴۲ اسب</div><div class="specs"><div><b>حجم</b><span>1043cc</span></div><div><b>قدرت</b><span>142</span></div><div><b>وزن</b><span>221kg</span></div><div><b>سرعت</b><span>245</span></div></div><div class="price">۱/۷۲ میلیارد تومان<small>صفر • دست‌دوم ۳/۲ میلیارد</small></div></div></article>
+<article class="card" data-brand="kawasaki" data-price="3200000000" data-power="200" data-name="kawasaki ninja zx-10r"><div class="img"><img loading="lazy" src="https://sanginmotor.com/wp-content/uploads/2026/01/%D9%85%D9%88%D8%AA%D9%88%D8%B1-%D8%B3%D9%86%DA%AF%DB%8C%D9%86.webp" alt="Ninja"></div><div class="info"><h2>Ninja ZX-10R</h2><div class="sub">۹۹۸ سی‌سی • سوپربایک ۲۰۰ اسب</div><div class="specs"><div><b>حجم</b><span>998cc</span></div><div><b>قدرت</b><span>200</span></div><div><b>وزن</b><span>207kg</span></div><div><b>سرعت</b><span>299</span></div></div><div class="price">حدود ۳/۲ میلیارد<small>۲۰۱۶ به بالا</small></div></div></article>
+<article class="card" data-brand="kawasaki" data-price="5000000000" data-power="231" data-name="kawasaki h2"><div class="img ph">🏍️ Ninja H2 سوپرشارژ<br>۲۳۱ اسب • هیولا</div><div class="info"><h2>Ninja H2</h2><div class="sub">۹۹۸ سی‌سی سوپرشارژ • کلکسیونی</div><div class="specs"><div><b>حجم</b><span>998cc</span></div><div><b>قدرت</b><span>231</span></div><div><b>وزن</b><span>238kg</span></div><div><b>سرعت</b><span>326+</span></div></div><div class="price">بالای ۵ میلیارد<small>تک و خاص</small></div></div></article>
+<article class="card" data-brand="suzuki" data-price="3820000000" data-power="199" data-name="suzuki gsx"><div class="img ph">🏍️ GSX-R1000<br>افسانه جیکسر</div><div class="info"><h2>Suzuki GSX-R1000</h2><div class="sub">۹۹۹ سی‌سی • ۱۹۹ اسب</div><div class="specs"><div><b>حجم</b><span>999cc</span></div><div><b>قدرت</b><span>199</span></div><div><b>وزن</b><span>203kg</span></div><div><b>سرعت</b><span>299</span></div></div><div class="price">۱/۲ تا ۳/۸ میلیارد<small>بسته به تمیزی</small></div></div></article>
+<article class="card" data-brand="suzuki" data-price="3500000000" data-power="187" data-name="suzuki hayabusa"><div class="img ph">🏍️ Hayabusa 1340<br>سلطان سرعت</div><div class="info"><h2>Hayabusa 1340</h2><div class="sub">۱۳۴۰ سی‌سی • ۱۸۷ اسب • درگ و جاده</div><div class="specs"><div><b>حجم</b><span>1340cc</span></div><div><b>قدرت</b><span>187</span></div><div><b>وزن</b><span>264kg</span></div><div><b>سرعت</b><span>299</span></div></div><div class="price">بالای ۳ میلیارد<small>دست‌دوم تمیز</small></div></div></article>
+<article class="card" data-brand="bmw" data-price="6000000000" data-power="210" data-name="bmw s1000rr"><div class="img ph bmw">🏍️ BMW S1000RR<br>۲۱۰ اسب • دقت آلمانی</div><div class="info"><h2>BMW S1000RR</h2><div class="sub">۹۹۹ سی‌سی • فول الکترونیک • ۱۹۸ کیلو</div><div class="specs"><div><b>حجم</b><span>999cc</span></div><div><b>قدرت</b><span>210</span></div><div><b>وزن</b><span>198kg</span></div><div><b>سرعت</b><span>303</span></div></div><div class="price">۳/۲ تا ۶ میلیارد<small>تک ایران گران‌تر</small></div></div></article>
+<article class="card" data-brand="bmw" data-price="4487749000" data-power="145" data-name="bmw r1300gs"><div class="img ph bmw">🏍️ BMW R1300GS<br>ادونچر • باک ۳۰ لیتری</div><div class="info"><h2>R1300GS Adventure</h2><div class="sub">۱۳۰۰ سی‌سی • بهترین برای سفر • برد ۶۰۰ کیلومتر</div><div class="specs"><div><b>حجم</b><span>1300cc</span></div><div><b>قدرت</b><span>145</span></div><div><b>وزن</b><span>237kg</span></div><div><b>برد</b><span>600km</span></div></div><div class="price">معادل ۴/۴۸ میلیارد<small>قیمت جهانی + گمرک</small></div></div></article>
+</main>
+<div class="box"><h2>مقایسه سریع همه</h2><table><tr><th>مدل</th><th>حجم</th><th>قدرت</th><th>قیمت</th></tr><tr><td>R1</td><td>998</td><td>200</td><td>6/5 میلیارد</td></tr><tr><td>CB1300</td><td>1284</td><td>114</td><td>1/6 میلیارد</td></tr><tr><td>Z1000</td><td>1043</td><td>142</td><td>1/72 میلیارد</td></tr><tr><td>S1000RR</td><td>999</td><td>210</td><td>3/2 تا 6 میلیارد</td></tr><tr><td>Hayabusa</td><td>1340</td><td>187</td><td>+3 میلیارد</td></tr></table></div>
+<footer>سنگین‌راید • همه موتورها یک‌جا • منبع: sanginmotor.com ، divar ، bama</footer>
+<script>
+const btns=document.querySelectorAll('.filters button');
+const cards=[...document.querySelectorAll('.card')];
+const search=document.getElementById('search');
+const sort=document.getElementById('sort');
+const grid=document.getElementById('grid');
+let f='all';
+function apply(){let list=cards.filter(c=>{const okF=f==='all'||c.dataset.brand===f;const q=search.value.trim().toLowerCase();const okQ=!q||c.dataset.name.toLowerCase().includes(q)||c.innerText.toLowerCase().includes(q);return okF&&okQ;});
+if(sort.value==='cheap')list.sort((a,b)=>+a.dataset.price-+b.dataset.price);
+if(sort.value==='exp')list.sort((a,b)=>+b.dataset.price-+a.dataset.price);
+if(sort.value==='power')list.sort((a,b)=>+b.dataset.power-+a.dataset.power);
+grid.innerHTML='';list.forEach(c=>grid.appendChild(c));
+if(!list.length)grid.innerHTML='<p style="text-align:center;color:#888;padding:30px">چیزی پیدا نشد.</p>';}
+btns.forEach(b=>b.onclick=()=>{btns.forEach(x=>x.classList.remove('active'));b.classList.add('active');f=b.dataset.f;apply();});
+search.oninput=apply;sort.onchange=apply;
+</script>
+</body>
+</html>
